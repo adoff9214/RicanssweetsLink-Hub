@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Rican's Sweets by Fany</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 120px 18px 35px;
+      font-family: 'Inter', sans-serif;
+      color: white;
+      background:
+        radial-gradient(circle at top, rgba(212,175,55,.22), transparent 32%),
+        linear-gradient(160deg, #050302, #120b06 45%, #1d1208 75%, #050302);
+      overflow-x: hidden;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 470px;
+      margin: 0 auto;
+      position: relative;
+      padding: 100px 28px 38px;
+      border-radius: 34px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(212,175,55,.35);
+      box-shadow: 0 25px 60px rgba(0,0,0,.55);
+      text-align: center;
+      overflow: visible;
+    }
+
+    .logo-wrap {
+      position: absolute;
+      top: -85px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: #111;
+      border: 4px solid #d4af37;
+      box-shadow: 0 0 40px rgba(212,175,55,.45);
+      overflow: hidden;
+      z-index: 5;
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .lang-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      border: none;
+      background: linear-gradient(135deg, #d4af37, #f6e08c);
+      color: #111;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      cursor: pointer;
+      z-index: 6;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      line-height: 1.05;
+      color: #f5d97b;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #f5e6c8;
+      margin-bottom: 32px;
+    }
+
+    .location {
+      display: block;
+      margin-top: 18px;
+      font-size: 18px;
+    }
+
+    .btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 22px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 800;
+      transition: .25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .primary-btn {
+      background: linear-gradient(135deg, #d4af37, #ffe48f, #b98a22);
+      color: #111;
+      box-shadow: 0 12px 24px rgba(212,175,55,.25);
+    }
+
+    .secondary-btn {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(212,175,55,.35);
+      color: white;
+    }
+
+    .btn i {
+      font-size: 25px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      color: #d8c188;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .sparkle {
+      color: #d4af37;
+    }
+
+    @media (max-width: 500px) {
+      body {
+        padding-top: 105px;
+      }
+
+      .card {
+        padding: 90px 22px 34px;
+      }
+
+      .logo-wrap {
+        width: 145px;
+        height: 145px;
+        top: -72px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .btn {
+        font-size: 17px;
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="card">
+
+    <div class="logo-wrap">
+      <img src="logo.png" alt="Rican's Sweets Logo">
+    </div>
+
+    <button class="lang-btn" onclick="toggleLang()" id="langBtn">
+      Español
+    </button>
+
+    <h1>Rican's Sweets</h1>
+
+    <p class="subtitle" id="bio">
+      Puerto Rican desserts made with love.
+      Moist cakes, custom cakes & sweet treats
+      for every occasion.
+
+      <span class="location">
+        📍 Port St. Lucie, Florida
+      </span>
+    </p>
+
+    <a class="btn primary-btn" href="https://wa.me/15617675382" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span id="waText">Order on WhatsApp</span>
+    </a>
+
+    <a class="btn secondary-btn" href="https://ricanssweets.com/" target="_blank">
+      <i class="fa-solid fa-globe"></i>
+      <span id="webText">Visit Website</span>
+    </a>
+
+    <a class="btn secondary-btn" href="https://www.instagram.com/ricanssweets" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+      Instagram
+    </a>
+
+    <a class="btn secondary-btn" href="https://www.facebook.com/share/191p7wjX8B/" target="_blank">
+      <i class="fa-brands fa-facebook-f"></i>
+      Facebook
+    </a>
+
+    <div class="footer" id="footer">
+      <span class="sparkle">✦</span>
+      Homemade flavor. Elegant presentation. Boricua soul 🇵🇷
+    </div>
+
+  </main>
+
+  <script>
+    let spanish = false;
+
+    function toggleLang() {
+      spanish = !spanish;
+
+      document.getElementById("langBtn").innerHTML =
+        spanish ? "English" : "Español";
+
+      document.getElementById("bio").innerHTML = spanish
+        ? `Postres puertorriqueños hechos con amor.
+           Bizcochos mojaditos, bizcochos personalizados
+           y dulces para toda ocasión.
+           <span class="location">📍 Port St. Lucie, Florida</span>`
+        : `Puerto Rican desserts made with love.
+           Moist cakes, custom cakes & sweet treats
+           for every occasion.
+           <span class="location">📍 Port St. Lucie, Florida</span>`;
+
+      document.getElementById("waText").innerHTML =
+        spanish ? "Ordenar por WhatsApp" : "Order on WhatsApp";
+
+      document.getElementById("webText").innerHTML =
+        spanish ? "Visitar Página Web" : "Visit Website";
+
+      document.getElementById("footer").innerHTML = spanish
+        ? `<span class="sparkle">✦</span>
+           Sabor casero. Presentación elegante. Alma boricua 🇵🇷`
+        : `<span class="sparkle">✦</span>
+           Homemade flavor. Elegant presentation. Boricua soul 🇵🇷`;
+    }
+  </script>
+
+</body>
+</html>
